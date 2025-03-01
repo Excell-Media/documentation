@@ -45,6 +45,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -452,6 +454,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservices Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -473,28 +508,6 @@
   
   <span class="md-ellipsis">
     IAM
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API
     
   </span>
   
@@ -575,6 +588,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservices Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -598,14 +644,59 @@
 <p>IAM helps organizations control user identities and their permissions in a secure and efficient manner. It includes authentication mechanisms such as passwords, multi-factor authentication (MFA), and biometrics to verify users before granting them access. Authorization defines what actions a user can perform, such as read, write, or admin privileges on a resource. Together, these processes mitigate security risks, ensuring that only legitimate users can access sensitive resources.</p>
 <p>Key components of IAM include:</p>
 <ol>
-<li><strong>User Management:</strong> Creating, modifying, and deleting user accounts, including roles and permissions.</li>
-<li><strong>Authentication:</strong> Methods like single sign-on (SSO), MFA, and password policies for secure user access.</li>
-<li><strong>Authorization:</strong> Defining roles and access levels to restrict user actions within systems.</li>
-<li><strong>Identity Federation:</strong> Allowing users to log in using credentials from another trusted system, such as social logins or enterprise identity providers.</li>
-<li><strong>Access Governance:</strong> Monitoring and auditing access to ensure compliance with security policies.</li>
+<li>User Management: Creating, modifying, and deleting user accounts, including roles and permissions.</li>
+<li>Authentication: Methods like single sign-on (SSO), MFA, and password policies for secure user access.</li>
+<li>Authorization: Defining roles and access levels to restrict user actions within systems.</li>
+<li>Identity Federation: Allowing users to log in using credentials from another trusted system, such as social logins or enterprise identity providers.</li>
+<li>Access Governance: Monitoring and auditing access to ensure compliance with security policies.</li>
 </ol>
 <p>A well-implemented IAM strategy enhances security, improves operational efficiency, and ensures compliance with regulatory requirements. It minimizes the risk of unauthorized access, insider threats, and data breaches. Modern IAM solutions are essential for cloud-based environments where organizations need to manage access across various applications and devices securely.</p>
 <p>In Excell Employee App <a href="iam/">KeyCloak</a> is proposed for implementation.</p>
+<h2 id="microservices-architecture">Microservices Architecture</h2>
+<h3 id="short-overview">Short Overview</h3>
+<p>Microservices architecture is a modern software design approach that structures an application as a collection of small, independent services that communicate with each other through well-defined APIs. Unlike traditional monolithic architectures, where all components are tightly coupled and deployed as a single unit, microservices are loosely coupled and can be developed, deployed, and scaled independently.</p>
+<p>Each microservice is designed to handle a specific business capability, such as user authentication, ticket processing, or notification handling. These services interact over lightweight communication protocols like REST.</p>
+<p>Microservices promote agility, scalability, and resilience, making them a preferred choice for cloud-native applications, DevOps workflows, and enterprise-level solutions.</p>
+<h3 id="advantages">Advantages</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scalability</td>
+<td>Microservices can be scaled independently based on demand, allowing critical services like payment processing to receive more resources without affecting the rest of the system.</td>
+</tr>
+<tr>
+<td>Fault Isolation &amp; Resilience</td>
+<td>Failures in one microservice do not impact the entire system, ensuring better fault tolerance and graceful degradation through independent service operations.</td>
+</tr>
+<tr>
+<td>Faster Development &amp; Deployment</td>
+<td>Parallel development of microservices enables faster release cycles, while CI/CD pipelines streamline deployment without requiring full system redeployments.</td>
+</tr>
+<tr>
+<td>Technology Flexibility</td>
+<td>Different microservices can use varied programming languages, databases, and frameworks, allowing teams to choose the most suitable technology for each service.</td>
+</tr>
+<tr>
+<td>Improved Maintainability &amp; Modularity</td>
+<td>With each microservice handling a specific function, the codebase remains smaller and more manageable, making debugging and updates simpler.</td>
+</tr>
+<tr>
+<td>Enhanced Security &amp; Compliance</td>
+<td>Sensitive data can be isolated within specific services, reducing system-wide security risks, while compliance requirements can be enforced at a granular level.</td>
+</tr>
+<tr>
+<td>Better Resource Utilization</td>
+<td>Deployment in containers (Docker, Kubernetes) ensures optimal resource allocation, with targeted load balancing preventing unnecessary overhead.</td>
+</tr>
+</tbody>
+</table>
+<p>The microservices in Excell Employee ecosystem are <a href="./">discussed here</a></p>
 
 
 

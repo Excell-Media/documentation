@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../api/">
+        <link rel="next" href="../ms/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -44,6 +44,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../assets/custom.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -578,28 +580,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ms/" class="md-nav__link">
         
   
@@ -771,54 +751,54 @@
 <p>Organizations can configure Keycloak to provide secure authentication without building their own authentication mechanisms.</p>
 <p>Keycloak’s notable features applicable for Employee App:</p>
 <ol>
-<li><strong>Single Sign-On (SSO):</strong> Allows users to log in once and access multiple applications without re-authenticating.</li>
-<li><strong>Multi-Factor Authentication (MFA):</strong> Enhances security by requiring additional authentication steps.</li>
-<li><strong>Fine-Grained Access Control:</strong> Uses role-based access control (RBAC) and attribute-based access control (ABAC) to enforce security policies.</li>
-<li><strong>Extensibility:</strong> Offers the ability to customize authentication flows, login screens, and user session handling.</li>
+<li>Single Sign-On (SSO): Allows users to log in once and access multiple applications without re-authenticating.</li>
+<li>Multi-Factor Authentication (MFA): Enhances security by requiring additional authentication steps.</li>
+<li>Fine-Grained Access Control: Uses role-based access control (RBAC) and attribute-based access control (ABAC) to enforce security policies.</li>
+<li>Extensibility: Offers the ability to customize authentication flows, login screens, and user session handling.</li>
 </ol>
-<p>Keycloak operates using a <strong>realm-based structure</strong>, where each realm represents an isolated security domain. Users, roles, and clients (applications) exist within realms, enabling granular control over authentication and authorization policies.</p>
+<p>Keycloak operates using a realm-based structure, where each realm represents an isolated security domain. Users, roles, and clients (applications) exist within realms, enabling granular control over authentication and authorization policies.</p>
 <p>The next section will explore how Keycloak is implemented within Excell to manage authentication and authorization effectively.</p>
-<h2 id="keycloak-implementation-for-excell"><strong>Keycloak Implementation for Excell</strong></h2>
-<h3 id="scopes-and-authorization-strategy"><strong>Scopes and Authorization Strategy</strong></h3>
-<p>In Excell's implementation of IAM, access control is managed through <strong>scopes</strong>, which define the features available to a user. These scopes are included as part of the authentication token issued by Keycloak. However, <strong>data-level authorizations</strong>—such as determining which users fall under a specific hierarchy—are handled separately within the database. This ensures that IAM remains focused on authentication and high-level authorization, while finer data access controls are managed dynamically by the application.</p>
-<p>For instance, scopes like <code>view.all</code> allow a user to <strong>see reports for users under them</strong>, but IAM itself does not determine who these users are. Instead, the system retrieves this hierarchy from the database based on business logic. This separation ensures flexibility and efficiency in access control. A more detailed discussion on data-level authorization is discussed here.</p>
-<h3 id="scope-based-implementation"><strong>Scope-Based Implementation</strong></h3>
+<h2 id="keycloak-implementation-for-excell">Keycloak Implementation for Excell</h2>
+<h3 id="scopes-and-authorization-strategy">Scopes and Authorization Strategy</h3>
+<p>In Excell's implementation of IAM, access control is managed through scopes, which define the features available to a user. These scopes are included as part of the authentication token issued by Keycloak. However, data-level authorizations—such as determining which users fall under a specific hierarchy—are handled separately within the database. This ensures that IAM remains focused on authentication and high-level authorization, while finer data access controls are managed dynamically by the application.</p>
+<p>For instance, scopes like <code>view.all</code> allow a user to see reports for users under them, but IAM itself does not determine who these users are. Instead, the system retrieves this hierarchy from the database based on business logic. This separation ensures flexibility and efficiency in access control. A more detailed discussion on data-level authorization is discussed here.</p>
+<h3 id="scope-based-implementation">Scope-Based Implementation</h3>
 <p>Each functional area in Excell is governed by a predefined set of scopes that dictate user permissions. These scopes are attached to user roles within Keycloak and included in the access token issued upon authentication. Below are the key scopes defined for different modules:</p>
-<h4 id="attendance-management"><strong>Attendance Management</strong></h4>
+<h4 id="attendance-management">Attendance Management</h4>
 <ul>
 <li><code>mark.self</code> → Allows the user to mark their own attendance.</li>
 <li><code>view.self</code> → Allows the user to view their own attendance records.</li>
-<li><code>view.all</code> → Allows the user to view the attendance report of users <strong>under them</strong>.</li>
+<li><code>view.all</code> → Allows the user to view the attendance report of users under them.</li>
 </ul>
-<h4 id="customer-operations"><strong>Customer Operations</strong></h4>
+<h4 id="customer-operations">Customer Operations</h4>
 <ul>
 <li><code>caf.create</code> → Grants permission to create a new customer CAF (Customer Application Form).</li>
 <li><code>caf.view.self</code> → Allows the user to view CAF records associated with them.</li>
-<li><code>caf.view.all</code> → Allows the user to view all CAF records of users <strong>under them</strong>.</li>
+<li><code>caf.view.all</code> → Allows the user to view all CAF records of users under them.</li>
 </ul>
-<h4 id="support-ticketing"><strong>Support Ticketing</strong></h4>
+<h4 id="support-ticketing">Support Ticketing</h4>
 <ul>
 <li><code>ticket.create</code> → Allows the user to create a new support ticket.</li>
 <li><code>ticket.close</code> → Grants permission to close tickets assigned to the user.</li>
 <li><code>ticket.view</code> → Allows the user to view their own tickets.</li>
-<li><code>ticket.view.all</code> → Allows the user to view tickets <strong>created by users under them</strong>.</li>
+<li><code>ticket.view.all</code> → Allows the user to view tickets created by users under them.</li>
 </ul>
-<h4 id="user-profile-management"><strong>User Profile Management</strong></h4>
+<h4 id="user-profile-management">User Profile Management</h4>
 <ul>
 <li><code>profile.view.self</code> → Allows the user to view their own profile details.</li>
 <li><code>profile.modify.self</code> → Grants permission to modify their own profile.</li>
 </ul>
-<h3 id="implementation-example"><strong>Implementation Example</strong></h3>
-<p>The implementation follows a <strong>role-based</strong> approach where roles are assigned to users, and these roles contain specific scopes. When a user logs in, Keycloak issues an <strong>access token</strong> containing the scopes granted to that user. The application then extracts these scopes and enforces access control accordingly.</p>
+<h3 id="implementation-example">Implementation Example</h3>
+<p>The implementation follows a role-based approach where roles are assigned to users, and these roles contain specific scopes. When a user logs in, Keycloak issues an access token containing the scopes granted to that user. The application then extracts these scopes and enforces access control accordingly.</p>
 <p>For example, when a manager accesses the attendance report, the system:</p>
 <ol>
-<li><strong>Extracts the user's scopes from the token.</strong></li>
-<li><strong>Checks if <code>view.all</code> is present.</strong></li>
-<li><strong>If <code>view.all</code> is available, fetches the list of users under the manager from the database.</strong></li>
-<li><strong>Displays attendance data only for those users.</strong></li>
+<li>Extracts the user's scopes from the token.</li>
+<li>Checks if <code>view.all</code> is present.</li>
+<li>If <code>view.all</code> is available, fetches the list of users under the manager from the database.</li>
+<li>Displays attendance data only for those users.</li>
 </ol>
-<p>This ensures that while IAM defines <strong>who has the permission to view certain data</strong>, the actual data retrieval logic remains <strong>separate and dynamic</strong>.</p>
-<p>We will expand further in the next section to discuss <strong>role-based assignments, token validation, and a real-world request-response cycle</strong> using Keycloak.</p>
+<p>This ensures that while IAM defines who has the permission to view certain data, the actual data retrieval logic remains separate and dynamic.</p>
+<p>We will expand further in the next section to discuss role-based assignments, token validation, and a real-world request-response cycle using Keycloak.</p>
 
 
 

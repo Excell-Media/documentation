@@ -11,7 +11,7 @@
         <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/">
       
       
-        <link rel="prev" href="../api/">
+        <link rel="prev" href="../iam/">
       
       
       
@@ -42,6 +42,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../assets/custom.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -439,28 +441,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -473,6 +453,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -483,6 +475,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-in-excells-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices in Excell's Architecture
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -524,6 +544,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-in-excells-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices in Excell's Architecture
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -539,6 +576,50 @@
 
 
 <h1 id="microservices">Microservices</h1>
+<h2 id="microservices-in-excells-architecture">Microservices in Excell's Architecture</h2>
+<p>To ensure scalability, modularity, and flexibility in its system design. Functionalities are divided into independent <em>services</em>, each responsible for a specific domain. This approach allows to develop, deploy, and scale services independently, improving performance and maintainability.</p>
+<p>At the core of microservices ecosystem is IAM, which governs authentication and authorization using Keycloak. Additional services handle business logic, notifications, storage, external integrations, and system observability.</p>
+<p>Each microservice operates as a self-contained unit, communicating with others through lightweight APIs. This architecture not only enhances reliability but also enables seamless horizontal scaling, ensuring optimal performance even under high workloads.</p>
+<p>The following table provides an overview of the key microservices in Excell’s architecture:</p>
+<table>
+<thead>
+<tr>
+<th>Microservice</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IAM Service</td>
+<td>Keycloak with PostgreSQL for identity and access management.</td>
+</tr>
+<tr>
+<td>IAM Admin API Service</td>
+<td>Exposes admin APIs for creating, deleting users, managing groups, and assigning roles.</td>
+</tr>
+<tr>
+<td>Core API Service</td>
+<td>Backend API for the user interface and mobile app.</td>
+</tr>
+<tr>
+<td>Notification Service</td>
+<td>Aggregator for sending SMS, mobile notifications, emails, and alerts.</td>
+</tr>
+<tr>
+<td>Storage Service</td>
+<td>Exposes APIs for adding, viewing, and managing files.</td>
+</tr>
+<tr>
+<td>External API Service</td>
+<td>Interface for external APIs like Aadhaar authentication.</td>
+</tr>
+<tr>
+<td>Observability Service</td>
+<td>Uses Fluent Bit, Prometheus, and Grafana for centralized logging and server performance monitoring.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="./">Diagram</a></p>
 
 
 
