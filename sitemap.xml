@@ -17,7 +17,19 @@
          <lastmod>2025-03-01</lastmod>
     </url>
     <url>
+         <loc>http://113.11.231.52/docs/design/application/ms/core-api/</loc>
+         <lastmod>2025-03-01</lastmod>
+    </url>
+    <url>
+         <loc>http://113.11.231.52/docs/design/application/ms/iam-admin-api/</loc>
+         <lastmod>2025-03-01</lastmod>
+    </url>
+    <url>
          <loc>http://113.11.231.52/docs/design/application/ms/keycloak/</loc>
+         <lastmod>2025-03-01</lastmod>
+    </url>
+    <url>
+         <loc>http://113.11.231.52/docs/design/application/ms/notify/</loc>
          <lastmod>2025-03-01</lastmod>
     </url>
     <url>
