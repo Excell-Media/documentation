@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Storage API - Excell Media Pvt. Ltd.</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.6.1, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../../../css/style.min.css" rel="stylesheet">
+<link href="../../../../assets/custom.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../../../.." target="_blank" class="custom-link">Excell Media Pvt. Ltd.</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../../../..">Home</a>
+<li class="header">Design</li>
+
+<li>
+<a href="#">Infrastructure</a>
+<ul>
+
+<li>
+<a href="../../../infra/" class="">Overview</a>
+</li>
+
+<li>
+<a href="../../../infra/kubernetes/" class="">Kubernetes</a>
+</li>
+
+<li>
+<a href="../../../infra/monolithic/" class="">Monolithic</a>
+</li>
+</ul>
+</li>
+
+<li>
+<a href="#">Application</a>
+<ul>
+
+<li>
+<a href="../../" class="">Overview</a>
+</li>
+
+<li>
+<a href="../../iam/" class="">IAM</a>
+</li>
+
+<li>
+<a href="#">Microservices</a>
+<ul>
+
+<li>
+<a href="../" class="">Overview</a>
+</li>
+
+<li>
+<a href="../keycloak/" class="">Access Management</a>
+</li>
+
+<li>
+<a href="../iam-admin-api/" class="">User Admin API</a>
+</li>
+
+<li>
+<a href="../core-api/" class="">Core API</a>
+</li>
+
+<li>
+<a href="../notify/" class="">Notification API</a>
+</li>
+
+<li>
+<a href="./" class="active">Storage API</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="storage-api-service">Storage API Service</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The Storage Service provides a scalable and secure solution for storing, retrieving, and managing files. It allows applications and users to upload, retrieve, and delete files while enforcing access controls based on predefined permissions. The service ensures fine-grained control over data access, integrating with authentication and authorization mechanisms to provide a robust security model.</p>
+<h2 id="advantages-of-the-storage-service">Advantages of the Storage Service</h2>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fine-Grained Access Control</td>
+<td>Permissions are managed at the folder level using Keycloak scopes and MongoDB-based user access rules.</td>
+</tr>
+<tr>
+<td>Scalable &amp; Secure</td>
+<td>Designed to handle large file storage with efficient retrieval and access management.</td>
+</tr>
+<tr>
+<td>API-Based Access</td>
+<td>Provides a structured REST API for seamless integration with applications.</td>
+</tr>
+<tr>
+<td>Authentication &amp; Authorization</td>
+<td>Uses Keycloak to enforce access control with role-based and scope-based permissions.</td>
+</tr>
+<tr>
+<td>Multi-Tenant Support</td>
+<td>Enables isolated storage for different users or services with independent access controls.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-control-mechanism">Access Control Mechanism</h2>
+<ul>
+<li><strong>Keycloak Scopes:</strong></li>
+<li><code>storage.put</code>: Required for uploading files</li>
+<li><code>storage.get</code>: Required for downloading files</li>
+<li><code>storage.delete</code>: Required for deleting files</li>
+<li><strong>MongoDB-Based Permissions:</strong></li>
+<li>Folder-level access rules define which users can perform operations within specific directories.</li>
+<li>Each file is associated with metadata that determines its ownership and access level.</li>
+</ul>
+<h2 id="technology-stack">Technology Stack</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Node.js</strong></td>
+<td>API backend for handling file operations and access control</td>
+</tr>
+<tr>
+<td><strong>TypeScript</strong></td>
+<td>Provides type safety and structured development</td>
+</tr>
+<tr>
+<td><strong>MongoDB</strong></td>
+<td>Stores metadata and user permissions for folder-based access control</td>
+</tr>
+<tr>
+<td><strong>Object Storage Backend</strong></td>
+<td>Designed to store and retrieve large files efficiently</td>
+</tr>
+<tr>
+<td><strong>Keycloak</strong></td>
+<td>Handles authentication and authorization using predefined scopes</td>
+</tr>
+</tbody>
+</table>
+<p>The Storage Service is designed to provide a <strong>secure, scalable, and API-driven</strong> approach to file management while ensuring controlled access through Keycloak and MongoDB-based authorization.</p>
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../../../js/main.js"></script>
+<script src="../../../../js/gitbook.min.js"></script>
+<script src="../../../../js/theme.min.js"></script>
+</body>
+</html>
