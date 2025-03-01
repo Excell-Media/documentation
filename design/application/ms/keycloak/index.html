@@ -725,7 +725,7 @@
 <h2 id="authentication-flow-for-employee-app-using-keycloak">Authentication Flow for Employee App Using Keycloak</h2>
 <p>To enable seamless authentication, Excell’s Employee App follows the OAuth 2.0 Authorization Code Flow using Keycloak as the identity provider (IdP). This ensures that users authenticate securely without exposing their credentials to the application. The process follows Single Sign-On (SSO) principles, meaning once authenticated, the user can access multiple services without logging in again.</p>
 <p>The flow involves redirecting unauthenticated users to Keycloak, validating their credentials, and exchanging an authorization code for tokens, which are used to maintain authenticated sessions. Below is the step-by-step process:</p>
-<p align="center">
+<p align="center" style=" box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
   <img src="../../../../assets/images/auth.1.svg" alt="image">
 </p>
 
@@ -771,8 +771,8 @@
 <h2 id="authentication-flow-for-backend-apis-using-keycloak">Authentication Flow for Backend APIs Using Keycloak</h2>
 <p>To ensure secure access to backend services, the Employee App uses an Access Token issued by Keycloak. This token is included in the HTTP headers of API requests and is verified by the backend before granting access to protected resources. The authentication process ensures that only authorized users can interact with backend services while maintaining security and compliance.</p>
 <p>The following diagram illustrates the interaction between the Employee App, Backend API, and Keycloak during token validation.</p>
-<p align="center">
-  <img src="../../../../assets/images/auth.2.svg" alt="image">
+<p align="center" style=" box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
+  <img  src="../../../../assets/images/auth.2.svg" alt="image">
 </p>
 
 <h3 id="authentication-steps_1">Authentication Steps</h3>
