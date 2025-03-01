@@ -821,44 +821,54 @@
 <li>Ensuring messages contain the correct contact details and content format</li>
 </ul>
 <h2 id="notification-workflow">Notification Workflow</h2>
+<p>The Notification Service follows a queue-based architecture to handle message processing efficiently. Source applications send notification requests to the Receiver API, which appends them to the Redis Message Queue. The Message Processor retrieves these messages and sends them to the appropriate external services based on the notification type.</p>
+<p align="center" style=" padding:16px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
+  <img  src="../../../../assets/images/notify.svg" alt="image">
+</p>
+
 <table>
 <thead>
 <tr>
 <th>Step</th>
-<th>Activity</th>
+<th>Component</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Receiving Notification Requests</td>
-<td>Various services submit notification requests, specifying the notification type (SMS, email, mobile push). Each request includes the recipient’s contact details and message content.</td>
+<td>Source Applications and Services</td>
+<td>Various applications generate notification requests and send them to the Notification Service.</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Queuing Requests in Redis Streams</td>
-<td>All requests are pushed into Redis Streams to ensure sequential processing and avoid loss of messages. This allows for high-throughput and scalable message handling.</td>
+<td>Receiver API</td>
+<td>The API receives notification requests and appends them to the Redis Message Queue.</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Processing and Sending Notifications</td>
-<td>A dedicated service retrieves requests from the queue and processes them based on notification type.</td>
+<td>Redis Message Queue</td>
+<td>Temporarily holds notification requests, ensuring they are processed sequentially and efficiently.</td>
 </tr>
 <tr>
-<td>3a</td>
-<td>SMS Processing</td>
-<td>Extracts the recipient’s phone number and message content, then forwards the request to an SMS gateway.</td>
+<td>4</td>
+<td>Message Processor</td>
+<td>Pulls messages from the queue and determines the notification type (Email, SMS, Mobile Notification).</td>
 </tr>
 <tr>
-<td>3b</td>
-<td>Email Processing</td>
-<td>Uses the email address and pre-formatted HTML content to send emails via an email provider.</td>
+<td>5a</td>
+<td>Email Handler</td>
+<td>Sends emails via configured SMTP servers.</td>
 </tr>
 <tr>
-<td>3c</td>
-<td>Mobile Notification Processing</td>
-<td>Sends push notifications to the specified device using the unique device ID, including the header image and content.</td>
+<td>5b</td>
+<td>SMS Handler</td>
+<td>Forwards SMS notifications to SMS APIs for delivery.</td>
+</tr>
+<tr>
+<td>5c</td>
+<td>Mobile Notification Handler</td>
+<td>Sends push notifications to users via Google Messaging or similar services.</td>
 </tr>
 </tbody>
 </table>
@@ -911,10 +921,10 @@
 </table>
 <h3 id="technology-stack">Technology Stack</h3>
 <ul>
-<li><strong>Node.js</strong> for handling API logic and message processing</li>
-<li><strong>TypeScript</strong> for type safety and structured development</li>
-<li><strong>Redis</strong> for queueing notification requests and ensuring message durability</li>
-<li><strong>MongoDB</strong> for notification information persistance and reporting</li>
+<li>Node.js for handling API logic and message processing</li>
+<li>TypeScript for type safety and structured development</li>
+<li>Redis for queueing notification requests and ensuring message durability</li>
+<li>MongoDB for notification information persistance and reporting</li>
 </ul>
 
 
