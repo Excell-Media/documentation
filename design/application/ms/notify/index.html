@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notification-service" class="md-skip">
+        <a href="#notification-api-service" class="md-skip">
           Skip to content
         </a>
       
@@ -607,38 +607,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Request Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contact-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contact Details
-    </span>
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#message-content" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Content
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
       Technology Stack
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -663,6 +639,28 @@
   
   <span class="md-ellipsis">
     Storage API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External API
     
   </span>
   
@@ -747,38 +745,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Request Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contact-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contact Details
-    </span>
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#message-content" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Content
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
       Technology Stack
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -798,7 +772,7 @@
 
 
 
-<h1 id="notification-service">Notification Service</h1>
+<h1 id="notification-api-service">Notification API Service</h1>
 <p>The Notification Service is responsible for handling all communication needs across various applications and services that require sending notifications via SMS, email, and mobile push notifications. It ensures reliable delivery of messages by leveraging a queue-based architecture for scalability and fault tolerance.</p>
 <h3 id="key-responsibilities">Key Responsibilities</h3>
 <ul>
@@ -807,7 +781,7 @@
 <li>Processing queued requests and sending notifications via the appropriate channel</li>
 <li>Ensuring messages contain the correct contact details and content format</li>
 </ul>
-<h2 id="notification-workflow">Notification Workflow</h2>
+<h3 id="notification-workflow">Notification Workflow</h3>
 <p>The Notification Service follows a queue-based architecture to handle message processing efficiently. Source applications send notification requests to the Receiver API, which appends them to the Redis Message Queue. The Message Processor retrieves these messages and sends them to the appropriate external services based on the notification type.</p>
 <p align="center" style=" padding:16px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
   <img  src="../../../../assets/images/notify.svg" alt="image">
@@ -859,8 +833,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="request-structure">Request Structure</h2>
-<h3 id="contact-details">Contact Details</h3>
+<h3 id="request-structure">Request Structure</h3>
 <table>
 <thead>
 <tr>
@@ -871,38 +844,15 @@
 <tbody>
 <tr>
 <td>SMS</td>
-<td>Mobile number</td>
+<td>Mobile number, Text message content</td>
 </tr>
 <tr>
 <td>Email</td>
-<td>Email address</td>
+<td>Email address, HTML content including subject and body</td>
 </tr>
 <tr>
 <td>Mobile Notification</td>
-<td>Unique device ID</td>
-</tr>
-</tbody>
-</table>
-<h3 id="message-content">Message Content</h3>
-<table>
-<thead>
-<tr>
-<th>Notification Type</th>
-<th>Required Content</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SMS</td>
-<td>Text message content</td>
-</tr>
-<tr>
-<td>Email</td>
-<td>HTML content including subject and body</td>
-</tr>
-<tr>
-<td>Mobile Notification</td>
-<td>Header image and notification content</td>
+<td>Unique device ID, Header image and notification content, other metadata</td>
 </tr>
 </tbody>
 </table>

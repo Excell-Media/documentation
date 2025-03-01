@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/iam-admin-api/">
+        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/external/">
       
       
-        <link rel="prev" href="../keycloak/">
+        <link rel="prev" href="../storage/">
       
-      
-        <link rel="next" href="../core-api/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>User Admin API - Excell Media Pvt. Ltd.</title>
+        <title>External API - Excell Media Pvt. Ltd.</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#iam-admin-api-for-keycloak" class="md-skip">
+        <a href="#external-api-service" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Admin API
+              External API
             
           </span>
         </div>
@@ -488,31 +486,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    User Admin API
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../iam-admin-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,62 +499,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features-of-iam-admin-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features of IAM Admin API
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-configurations-via-keycloak-admin-panel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Configurations via Keycloak Admin Panel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technology Stack
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -653,10 +574,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../external/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    External API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -666,6 +608,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-isolating-external-api-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of Isolating External API Calls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Integrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Stack
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -721,27 +710,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#advantages-of-isolating-external-api-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      Advantages of Isolating External API Calls
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features-of-iam-admin-api" class="md-nav__link">
+  <a href="#initial-integrations" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features of IAM Admin API
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-configurations-via-keycloak-admin-panel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Configurations via Keycloak Admin Panel
+      Initial Integrations
     </span>
   </a>
   
@@ -772,32 +752,87 @@
 
 
 
-<h1 id="iam-admin-api-for-keycloak">IAM Admin API for Keycloak</h1>
-<h3 id="introduction">Introduction</h3>
-<p>The IAM Admin API is responsible for managing users, roles, and role assignments within Keycloak. It provides endpoints to create, update, and delete users, as well as assign roles at both an individual and bulk level. This API serves as the foundation for the administrative interface, which will allow system administrators to manage identity and access-related tasks efficiently.</p>
-<p>The IAM Admin API will be consumed by an Admin UI, which will provide a user-friendly interface for managing authentication-related operations. The UI will interact with these APIs to perform bulk user creation, role assignments, and general user management.</p>
-<h3 id="key-features-of-iam-admin-api">Key Features of IAM Admin API</h3>
-<ul>
-<li>User management: Create, update, delete users within Keycloak</li>
-<li>Role management: Create and assign roles to users and groups</li>
-<li>Bulk user operations: APIs to support bulk user creation and role assignments</li>
-<li>Integration with the Admin UI: A web-based interface that interacts with these APIs</li>
-</ul>
-<h3 id="advanced-configurations-via-keycloak-admin-panel">Advanced Configurations via Keycloak Admin Panel</h3>
-<p>While the IAM Admin API handles user and role management, advanced configurations of Keycloak are managed through the Keycloak Admin Panel, which comes as part of Keycloak’s default installation. These configurations include:</p>
-<ul>
-<li>Configuring authentication flows, including multi-factor authentication (MFA) and conditional authentication</li>
-<li>Managing realm settings like session timeouts, token expiration policies, and security settings</li>
-<li>Defining fine-grained authorization policies using Keycloak’s built-in policy engine</li>
-<li>Enabling and configuring Single Sign-On (SSO) across multiple applications</li>
-</ul>
-<h3 id="technology-stack">Technology Stack</h3>
-<ul>
-<li>Node.js for server-side execution</li>
-<li>TypeScript for type safety and maintainability</li>
-<li>MongoDB for storing user metadata and additional information not managed directly by Keycloak</li>
-</ul>
-<p>This setup ensures that the IAM Admin API is scalable, secure, and extensible, providing a seamless interface for managing authentication and authorization in Excell’s ecosystem.</p>
+<h1 id="external-api-service">External API Service</h1>
+<p>The External API Service acts as a centralized gateway for interacting with third-party APIs. Instead of having multiple microservices directly communicate with external systems, this service isolates and standardizes all outbound API calls. This approach ensures better security, maintainability, and scalability while providing a unified interface for external integrations.</p>
+<h2 id="advantages-of-isolating-external-api-calls">Advantages of Isolating External API Calls</h2>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Centralized Control</td>
+<td>All third-party integrations are managed in one place, reducing duplication and inconsistencies.</td>
+</tr>
+<tr>
+<td>Security &amp; Compliance</td>
+<td>Sensitive API keys and credentials are stored securely, preventing direct exposure to other services.</td>
+</tr>
+<tr>
+<td>Error Handling &amp; Monitoring</td>
+<td>Provides unified logging, monitoring, and error-handling mechanisms for all external API calls.</td>
+</tr>
+<tr>
+<td>Load Management</td>
+<td>Prevents excessive external API requests by implementing caching, rate-limiting, and retries.</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>New third-party integrations can be added without modifying core microservices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="initial-integrations">Initial Integrations</h2>
+<table>
+<thead>
+<tr>
+<th>External API</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Excell Core APIs</td>
+<td>Manages Excell’s enterprise database and core business processes, ensuring seamless internal operations.</td>
+</tr>
+<tr>
+<td>Aadhaar Authentication API</td>
+<td>Used for Aadhaar-based authentication and identity verification.</td>
+</tr>
+</tbody>
+</table>
+<p>Future integrations can be added to support additional external services as required.</p>
+<h2 id="technology-stack">Technology Stack</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js</td>
+<td>API backend for handling external requests efficiently.</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>Ensures type safety and structured API interactions.</td>
+</tr>
+<tr>
+<td>Axios / HTTP Clients</td>
+<td>Used for making and managing API requests.</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>Used for caching API responses or tracking request logs.</td>
+</tr>
+</tbody>
+</table>
+<p>The External API Service provides a centralized, secure, and scalable solution for integrating third-party services while ensuring efficient request handling and data security.</p>
 
 
 

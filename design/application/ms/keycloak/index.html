@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-management-microservice" class="md-skip">
+        <a href="#access-management-service" class="md-skip">
           Skip to content
         </a>
       
@@ -517,6 +517,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#authentication-flow-for-employee-app-using-keycloak" class="md-nav__link">
     <span class="md-ellipsis">
       Authentication Flow for Employee App Using Keycloak
@@ -670,6 +679,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -718,6 +749,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#authentication-flow-for-employee-app-using-keycloak" class="md-nav__link">
@@ -792,9 +832,10 @@
 
 
 
-<h1 id="access-management-microservice">Access Management Microservice</h1>
-<h2 id="authentication-flow-for-employee-app-using-keycloak">Authentication Flow for Employee App Using Keycloak</h2>
+<h1 id="access-management-service">Access Management Service</h1>
+<h2 id="introduction">Introduction</h2>
 <p>To enable seamless authentication, Excell’s Employee App follows the OAuth 2.0 Authorization Code Flow using Keycloak as the identity provider (IdP). This ensures that users authenticate securely without exposing their credentials to the application. The process follows Single Sign-On (SSO) principles, meaning once authenticated, the user can access multiple services without logging in again.</p>
+<h2 id="authentication-flow-for-employee-app-using-keycloak">Authentication Flow for Employee App Using Keycloak</h2>
 <p>The flow involves redirecting unauthenticated users to Keycloak, validating their credentials, and exchanging an authorization code for tokens, which are used to maintain authenticated sessions. Below is the step-by-step process:</p>
 <p align="center" style="padding:16px;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
   <img src="../../../../assets/images/auth.1.svg" alt="image">
