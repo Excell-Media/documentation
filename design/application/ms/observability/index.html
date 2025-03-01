@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/notify/">
+        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/observability/">
       
       
-        <link rel="prev" href="../core-api/">
+        <link rel="prev" href="../external/">
       
-      
-        <link rel="next" href="../storage/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Notification API - Excell Media Pvt. Ltd.</title>
+        <title>Observability Service - Excell Media Pvt. Ltd.</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notification-api-service" class="md-skip">
+        <a href="#observability-service" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notification API
+              Observability Service
             
           </span>
         </div>
@@ -554,31 +552,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Notification API
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../notify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,62 +565,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-responsibilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Responsibilities
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notification-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notification Workflow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#request-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technology Stack
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -697,10 +618,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../observability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Observability Service
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -710,6 +652,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases &amp; Benefits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -765,38 +778,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-responsibilities" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Responsibilities
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notification-workflow" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#component-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Notification Workflow
+      Component Responsibilities
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#request-structure" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#observability-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Request Structure
+      Observability Workflow
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      Technology Stack
+      Use Cases &amp; Benefits
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -816,97 +844,123 @@
 
 
 
-<h1 id="notification-api-service">Notification API Service</h1>
-<p>The Notification Service is responsible for handling all communication needs across various applications and services that require sending notifications via SMS, email, and mobile push notifications. It ensures reliable delivery of messages by leveraging a queue-based architecture for scalability and fault tolerance.</p>
-<h3 id="key-responsibilities">Key Responsibilities</h3>
-<ul>
-<li>Receiving notification requests from multiple services and applications</li>
-<li>Queuing requests in Redis Streams for asynchronous processing</li>
-<li>Processing queued requests and sending notifications via the appropriate channel</li>
-<li>Ensuring messages contain the correct contact details and content format</li>
-</ul>
-<h3 id="notification-workflow">Notification Workflow</h3>
-<p>The Notification Service follows a queue-based architecture to handle message processing efficiently. Source applications send notification requests to the Receiver API, which appends them to the Redis Message Queue. The Message Processor retrieves these messages and sends them to the appropriate external services based on the notification type.</p>
-<p align="center" style=" padding:16px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
-  <img  src="../../../../assets/images/notify.svg" alt="image">
-</p>
-
+<h1 id="observability-service">Observability Service</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The Observability Service is responsible for real-time monitoring, centralized logging, and performance analysis across all microservices. It ensures that system health, application performance, and operational issues are tracked efficiently, reducing downtime and enabling proactive resolution of failures.</p>
+<p>The service is built using Fluent Bit, Prometheus, and Grafana, each playing a critical role in log aggregation, metrics collection, and data visualization.</p>
+<h3 id="key-features">Key Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System Metrics Collection</td>
+<td>Captures CPU, memory, disk usage, network statistics, and application-specific metrics for performance monitoring.</td>
+</tr>
+<tr>
+<td>Centralized Logging</td>
+<td>Collects logs from all microservices and system components, making debugging and troubleshooting more efficient.</td>
+</tr>
+<tr>
+<td>Real-Time Data Processing</td>
+<td>Enables near real-time visibility into system behavior, reducing the time to detect and resolve issues.</td>
+</tr>
+<tr>
+<td>Dashboards &amp; Visualization</td>
+<td>Provides interactive dashboards for live monitoring, trend analysis, and root cause investigation.</td>
+</tr>
+<tr>
+<td>Alerting &amp; Incident Response</td>
+<td>Triggers alerts based on custom thresholds, anomaly detection, and failure conditions, ensuring proactive issue resolution.</td>
+</tr>
+<tr>
+<td>Scalability &amp; Performance</td>
+<td>Designed to handle high-throughput log ingestion and large-scale metrics collection without degrading system performance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="component-responsibilities">Component Responsibilities</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fluent Bit</td>
+<td>Collects logs from application containers, system processes, and infrastructure components. It performs filtering, parsing, and forwarding logs to centralized storage.</td>
+</tr>
+<tr>
+<td>Prometheus</td>
+<td>Periodically scrapes metrics from microservices, databases, and system processes, storing them as time-series data for real-time analysis and historical trends.</td>
+</tr>
+<tr>
+<td>Grafana</td>
+<td>Provides custom dashboards that visualize metrics, logs, and alerts, integrating seamlessly with Prometheus for in-depth monitoring and analysis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="observability-workflow">Observability Workflow</h3>
 <table>
 <thead>
 <tr>
 <th>Step</th>
-<th>Component</th>
+<th>Process</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Source Applications and Services</td>
-<td>Various applications generate notification requests and send them to the Notification Service.</td>
+<td>Log Collection &amp; Processing (Fluent Bit)</td>
+<td>Logs from microservices, Kubernetes pods, and system processes are collected, processed, and categorized. Unstructured logs are parsed into a structured format for easy querying and filtering. Logs are then forwarded to long-term storage or indexed for search and analysis.</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Receiver API</td>
-<td>The API receives notification requests and appends them to the Redis Message Queue.</td>
+<td>Metrics Scraping &amp; Storage (Prometheus)</td>
+<td>Prometheus scrapes system metrics at regular intervals from APIs, application endpoints, and infrastructure components. Metrics are stored as time-series data, allowing real-time trend analysis, anomaly detection, and forecasting.</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Redis Message Queue</td>
-<td>Temporarily holds notification requests, ensuring they are processed sequentially and efficiently.</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Message Processor</td>
-<td>Pulls messages from the queue and determines the notification type (Email, SMS, Mobile Notification).</td>
-</tr>
-<tr>
-<td>5a</td>
-<td>Email Handler</td>
-<td>Sends emails via configured SMTP servers.</td>
-</tr>
-<tr>
-<td>5b</td>
-<td>SMS Handler</td>
-<td>Forwards SMS notifications to SMS APIs for delivery.</td>
-</tr>
-<tr>
-<td>5c</td>
-<td>Mobile Notification Handler</td>
-<td>Sends push notifications to users via Google Messaging or similar services.</td>
+<td>Visualization &amp; Alerts (Grafana)</td>
+<td>Grafana retrieves data from Prometheus and Fluent Bit, presenting it in real-time dashboards. Alerts are configured to detect failures, threshold breaches, and unexpected trends, triggering notifications to DevOps teams for proactive response.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="request-structure">Request Structure</h3>
+<h3 id="use-cases-benefits">Use Cases &amp; Benefits</h3>
 <table>
 <thead>
 <tr>
-<th>Notification Type</th>
-<th>Required Contact Information</th>
+<th>Use Case</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>SMS</td>
-<td>Mobile number, Text message content</td>
+<td>Detecting System Anomalies</td>
+<td>Set up alerts for high CPU usage, memory leaks, disk I/O issues, and network congestion before they impact performance.</td>
 </tr>
 <tr>
-<td>Email</td>
-<td>Email address, HTML content including subject and body</td>
+<td>Application Performance Monitoring</td>
+<td>Measure API response times, request rates, error counts, and database performance across microservices.</td>
 </tr>
 <tr>
-<td>Mobile Notification</td>
-<td>Unique device ID, Header image and notification content, other metadata</td>
+<td>Troubleshooting &amp; Debugging</td>
+<td>Correlate logs with system metrics to identify the root cause of failures or degraded performance in real time.</td>
+</tr>
+<tr>
+<td>Historical Data Analysis</td>
+<td>Store logs and metrics over time to identify long-term trends, recurring issues, and optimization opportunities.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="technology-stack">Technology Stack</h3>
-<ul>
-<li>Node.js for handling API logic and message processing</li>
-<li>TypeScript for type safety and structured development</li>
-<li>Redis for queueing notification requests and ensuring message durability</li>
-<li>MongoDB for notification information persistance and reporting</li>
-</ul>
+<p>The Observability Service ensures complete visibility into system performance, enabling proactive monitoring, faster issue resolution, and data-driven optimizations. It integrates seamlessly with existing microservices, ensuring that all logs, metrics, and alerts are captured efficiently without affecting application performance.</p>
 
 
 

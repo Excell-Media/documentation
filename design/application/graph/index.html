@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/">
+        <link rel="canonical" href="http://113.11.231.52/docs/design/application/graph/">
       
       
-        <link rel="prev" href="../graph/">
+        <link rel="prev" href="../iam/">
       
       
-        <link rel="next" href="keycloak/">
+        <link rel="next" href="../ms/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Overview - Excell Media Pvt. Ltd.</title>
+        <title>Inventory - Excell Media Pvt. Ltd.</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#microservices-in-excells-architecture" class="md-skip">
+        <a href="#neo4j" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Inventory
             
           </span>
         </div>
@@ -406,10 +406,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../graph/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Inventory
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -419,6 +440,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-implemention-for-excell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Implemention for Excell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Implemention for Excell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying-and-managing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying and Managing Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cypher-query-language-cql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cypher Query Language (CQL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexibility-in-network-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexibility in Network Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-metadata-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Metadata Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-data-retrieval-and-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Data Retrieval and Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -428,19 +562,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
@@ -455,7 +587,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4">
             <span class="md-nav__icon md-icon"></span>
             Microservices
@@ -466,19 +598,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +611,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -501,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="keycloak/" class="md-nav__link">
+      <a href="../ms/keycloak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-admin-api/" class="md-nav__link">
+      <a href="../ms/iam-admin-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="core-api/" class="md-nav__link">
+      <a href="../ms/core-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notify/" class="md-nav__link">
+      <a href="../ms/notify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="storage/" class="md-nav__link">
+      <a href="../ms/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="external/" class="md-nav__link">
+      <a href="../ms/external/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="observability/" class="md-nav__link">
+      <a href="../ms/observability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,6 +813,107 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-implemention-for-excell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Implemention for Excell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Implemention for Excell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying-and-managing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying and Managing Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cypher-query-language-cql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cypher Query Language (CQL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexibility-in-network-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexibility in Network Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-metadata-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Metadata Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-data-retrieval-and-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Data Retrieval and Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -705,49 +928,115 @@
 
 
 
-<h1 id="microservices-in-excells-architecture">Microservices in Excell's Architecture</h1>
-<p>To ensure scalability, modularity, and flexibility in its system design. Functionalities are divided into independent <em>services</em>, each responsible for a specific domain. This approach allows to develop, deploy, and scale services independently, improving performance and maintainability.</p>
-<p>At the core of microservices ecosystem is IAM, which governs authentication and authorization using Keycloak. Additional services handle business logic, notifications, storage, external integrations, and system observability.</p>
-<p>Each microservice operates as a self-contained unit, communicating with others through lightweight APIs. This architecture not only enhances reliability but also enables seamless horizontal scaling, ensuring optimal performance even under high workloads.</p>
-<p>The following table provides an overview of the key microservices in Excell’s architecture:</p>
+<h1 id="neo4j">Neo4j</h1>
+<h2 id="background">Background</h2>
+<p>Neo4j is a graph database designed to efficiently store, manage, and query highly connected data. Unlike traditional relational databases that use tables, rows, and joins, Neo4j represents data as nodes (entities) and relationships (connections), allowing for faster traversal and analysis of complex relationships. This makes it particularly well-suited for use cases where relationships between entities are as important as the entities themselves.</p>
+<p>Neo4j is the most widely adopted graph database, trusted by enterprises for applications involving network analysis, recommendation engines, fraud detection, and infrastructure management. It provides:</p>
+<ul>
+<li>ACID-compliant transactions, ensuring data integrity.</li>
+<li>Index-free adjacency, meaning each node maintains direct references to its connected nodes, eliminating the need for expensive joins.</li>
+<li>High availability and clustering support, making it suitable for large-scale distributed systems.</li>
+</ul>
+<h2 id="graph-implemention-for-excell">Graph Implemention for Excell</h2>
+<h3 id="network-hierarchy">Network Hierarchy</h3>
+<p>The network infrastructure is represented as a hierarchical graph where each node type contains metadata relevant to its function.</p>
 <table>
 <thead>
 <tr>
-<th>Microservice</th>
+<th>Level</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="keycloak/">IAM Service</a></td>
-<td>Keycloak with PostgreSQL for identity and access management.</td>
+<td>MNOC (Master Network Operations Center)</td>
+<td>Centralized control over multiple NOCs, handling large-scale network operations and escalations.</td>
 </tr>
 <tr>
-<td><a href="iam-admin-api/">IAM Admin API Service</a></td>
-<td>Exposes admin APIs for creating, deleting users, managing groups, and assigning roles.</td>
+<td>NOC (Network Operations Center)</td>
+<td>Regional monitoring and troubleshooting hub managing multiple Node Rooms.</td>
 </tr>
 <tr>
-<td><a href="core-api/">Core API Service</a></td>
-<td>Backend API for the user interface and mobile app.</td>
+<td>Node Room (Point of Presence, POP)</td>
+<td>Houses core network equipment (OLT, routers, switches), aggregating traffic from multiple junction boxes.</td>
 </tr>
 <tr>
-<td><a href="notify/">Notification Service</a></td>
-<td>Aggregator for sending SMS, mobile notifications, emails, and alerts.</td>
+<td>Junction Box (Splitter Hub / Fiber Distribution Hub)</td>
+<td>Connects the OLT in the Node Room to Distribution Boxes using passive optical splitters (e.g., 1:4, 1:8, 1:16).</td>
 </tr>
 <tr>
-<td><a href="storage/">Storage Service </a></td>
-<td>Exposes APIs for adding, viewing, and managing files.</td>
+<td>Distribution Box (Fiber Terminal Box)</td>
+<td>The last aggregation point before customer connections, converting fiber to drop cables leading to customer premises.</td>
 </tr>
 <tr>
-<td><a href="external/">External API Service</a></td>
-<td>Interface for external APIs like Aadhaar authentication.</td>
-</tr>
-<tr>
-<td><a href="observability/">Observability Service</a></td>
-<td>Uses Fluent Bit, Prometheus, and Grafana for centralized logging and server performance monitoring.</td>
+<td>Customer (ONT/ONU – Optical Network Terminal/Unit)</td>
+<td>The final connection where fiber is converted into internet service for the customer’s home or business.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="querying-and-managing-data">Querying and Managing Data</h3>
+<p>The inventory model enables real-time queries for operational insights and troubleshooting.</p>
+<p>Example use cases:</p>
+<ul>
+<li>Retrieve all customers connected to a specific distribution box, along with their broadband package details.</li>
+<li>Fetch all network devices within a Node Room, including installation dates, firmware versions, and maintenance history.</li>
+<li>Identify potential failure points by analyzing dependencies between Junction Boxes and Node Rooms.</li>
+</ul>
+<h3 id="cypher-query-language-cql">Cypher Query Language (CQL)</h3>
+<p>Neo4j uses Cypher Query Language (CQL), which is optimized for querying graph data. Instead of using SQL joins, Cypher allows for pattern-based searching, making queries more readable and performant.</p>
+<p>Example query:</p>
+<pre><code class="language-cypher">MATCH (customer:Customer)-[:CONNECTED_TO]-&gt;(box:DistributionBox)
+WHERE box.id = &quot;DBX-101&quot;
+RETURN customer.name, customer.plan
+</code></pre>
+<h3 id="flexibility-in-network-changes">Flexibility in Network Changes</h3>
+<p>One of the key advantages of using a graph-based model is the ability to modify the network hierarchy without significant architectural changes. In traditional relational databases, introducing a new level in a hierarchical structure often requires schema modifications, table restructuring, and complex migration processes. However, in a graph-based model, relationships between entities are stored dynamically, allowing new nodes and connections to be added, removed, or modified without disrupting existing data.</p>
+<p>For example, if a new level, such as an Intermediate Distribution Hub, needs to be introduced between Junction Boxes and Distribution Boxes, it can be seamlessly integrated by defining new relationships between existing nodes. The system does not require extensive refactoring, and existing queries can be adapted to traverse the new structure without rewriting core logic.</p>
+<p>This flexibility ensures that the inventory model remains adaptable to evolving network designs, accommodating infrastructure expansions, mergers, or reconfigurations with minimal overhead. The ability to modify and extend the hierarchy in real-time enhances scalability, maintainability, and operational efficiency, making it an ideal choice for managing dynamic network environments.</p>
+<h3 id="metadata-management">Metadata Management</h3>
+<p>Each network component, such as Node Rooms, Junction Boxes, Distribution Boxes, and ONT/ONU devices, contains important metadata that defines its role, status, and operational history. These attributes provide critical insights for monitoring, maintenance, and troubleshooting within the network infrastructure.</p>
+<h4 id="key-metadata-attributes">Key Metadata Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serial Number</td>
+<td>A unique identifier assigned to each device for tracking and asset management.</td>
+</tr>
+<tr>
+<td>Firmware Version</td>
+<td>The current firmware running on the network equipment, crucial for updates and security patches.</td>
+</tr>
+<tr>
+<td>Installation Date</td>
+<td>The date when the component was deployed, helping in lifecycle management and planned upgrades.</td>
+</tr>
+<tr>
+<td>Maintenance History</td>
+<td>A record of past maintenance activities, repairs, and service logs for proactive issue resolution.</td>
+</tr>
+<tr>
+<td>Customer Assignment</td>
+<td>Links network components to the specific customers they serve, enabling quick issue resolution and targeted service improvements.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="real-time-data-retrieval-and-updates">Real-Time Data Retrieval and Updates</h4>
+<p>This metadata can be retrieved and updated dynamically, ensuring that network operators have accurate, up-to-date information at all times. By leveraging the graph-based inventory model:</p>
+<ul>
+<li>Operators can quickly identify issues by tracing the relationships between faulty equipment and affected customers.</li>
+<li>Automated workflows can trigger maintenance reminders based on equipment age, firmware status, or past failures.</li>
+<li>Integration with external systems enables seamless updates when new devices are installed, replaced, or upgraded.</li>
+<li>Custom queries can fetch relevant data, such as all devices running outdated firmware or all customers served by a particular junction box.</li>
+</ul>
+<p>The ability to efficiently store, update, and analyze metadata ensures better network visibility, reduced downtime, and improved service reliability, making it an essential aspect of the infrastructure management process.</p>
+<hr />
+<p>The Inventory Management feature provides real-time visibility, relationship-driven querying, and seamless adaptability, making it an essential component of the application for managing telecom and ISP infrastructure effectively</p>
 
 
 
