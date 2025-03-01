@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/keycloak/">
+        <link rel="canonical" href="http://113.11.231.52/docs/design/infra/deployment/standalone/">
       
       
-        <link rel="prev" href="../core-api/">
+        <link rel="prev" href="../kubernetes/">
       
       
-        <link rel="next" href="../iam-admin-api/">
+        <link rel="next" href="../../../application/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Access Management - Excell Media Pvt. Ltd.</title>
+        <title>Standalone - Excell Media Pvt. Ltd.</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-management-service" class="md-skip">
+        <a href="#standalone-deployment-for-excell" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Access Management
+              Standalone
             
           </span>
         </div>
@@ -176,17 +176,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -201,187 +203,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Infrastructure
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../infra/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Deployment
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            Deployment
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../infra/deployment/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../infra/deployment/kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Kubernetes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../infra/deployment/standalone/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standalone
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Application
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Application
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -411,50 +236,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../iam/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IAM
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../graph/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inventory
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -467,14 +248,14 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Microservices
+    Deployment
     
   </span>
   
@@ -482,10 +263,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            Microservices
+            Deployment
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -496,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,11 +299,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-api/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Core API
+    Kubernetes
     
   </span>
   
@@ -553,7 +334,7 @@
           
   
   <span class="md-ellipsis">
-    Access Management
+    Standalone
     
   </span>
   
@@ -565,7 +346,7 @@
         
   
   <span class="md-ellipsis">
-    Access Management
+    Standalone
     
   </span>
   
@@ -588,19 +369,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication-flow-for-employee-app-using-keycloak" class="md-nav__link">
+  <a href="#standalone-deployment-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Flow for Employee App Using Keycloak
+      Standalone Deployment Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Authentication Flow for Employee App Using Keycloak">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-steps" class="md-nav__link">
+  <a href="#1-database-caching-node" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Steps
+      1. Database &amp; Caching Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-microservices-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Microservices Nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-observability-monitoring-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Observability &amp; Monitoring Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-load-balancer-reverse-proxy-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Load Balancer &amp; Reverse Proxy Node
     </span>
   </a>
   
@@ -612,28 +429,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication-flow-for-backend-apis-using-keycloak" class="md-nav__link">
+  <a href="#deployment-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Flow for Backend APIs Using Keycloak
+      Deployment Considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Authentication Flow for Backend APIs Using Keycloak">
+    <nav class="md-nav" aria-label="Deployment Considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-steps_1" class="md-nav__link">
+  <a href="#service-distribution-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Steps
+      Service Distribution Strategy
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
+  <a href="#storage-and-persistence" class="md-nav__link">
     <span class="md-ellipsis">
-      Technology Stack
+      Storage and Persistence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Networking
     </span>
   </a>
   
@@ -641,6 +467,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-standalone-vm-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Standalone VM Allocation
+    </span>
+  </a>
   
 </li>
       
@@ -653,6 +488,57 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -660,7 +546,175 @@
   
   
     <li class="md-nav__item">
-      <a href="../iam-admin-api/" class="md-nav__link">
+      <a href="../../../application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../application/iam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IAM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../application/graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Microservices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../application/ms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../application/ms/core-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Core API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../application/ms/keycloak/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../application/ms/iam-admin-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -682,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../notify/" class="md-nav__link">
+      <a href="../../../application/ms/notify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage/" class="md-nav__link">
+      <a href="../../../application/ms/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external/" class="md-nav__link">
+      <a href="../../../application/ms/external/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/" class="md-nav__link">
+      <a href="../../../application/ms/observability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -805,19 +859,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication-flow-for-employee-app-using-keycloak" class="md-nav__link">
+  <a href="#standalone-deployment-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Flow for Employee App Using Keycloak
+      Standalone Deployment Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Authentication Flow for Employee App Using Keycloak">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-steps" class="md-nav__link">
+  <a href="#1-database-caching-node" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Steps
+      1. Database &amp; Caching Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-microservices-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Microservices Nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-observability-monitoring-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Observability &amp; Monitoring Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-load-balancer-reverse-proxy-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Load Balancer &amp; Reverse Proxy Node
     </span>
   </a>
   
@@ -829,28 +919,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication-flow-for-backend-apis-using-keycloak" class="md-nav__link">
+  <a href="#deployment-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Flow for Backend APIs Using Keycloak
+      Deployment Considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Authentication Flow for Backend APIs Using Keycloak">
+    <nav class="md-nav" aria-label="Deployment Considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-steps_1" class="md-nav__link">
+  <a href="#service-distribution-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Steps
+      Service Distribution Strategy
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
+  <a href="#storage-and-persistence" class="md-nav__link">
     <span class="md-ellipsis">
-      Technology Stack
+      Storage and Persistence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Networking
     </span>
   </a>
   
@@ -858,6 +957,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-standalone-vm-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Standalone VM Allocation
+    </span>
+  </a>
   
 </li>
       
@@ -877,119 +985,198 @@
 
 
 
-<h1 id="access-management-service">Access Management Service</h1>
-<p>To enable seamless authentication, Excell’s Employee App follows the OAuth 2.0 Authorization Code Flow using Keycloak as the identity provider (IdP). This ensures that users authenticate securely without exposing their credentials to the application. The process follows Single Sign-On (SSO) principles, meaning once authenticated, the user can access multiple services without logging in again.</p>
-<h2 id="authentication-flow-for-employee-app-using-keycloak">Authentication Flow for Employee App Using Keycloak</h2>
-<p>The flow involves redirecting unauthenticated users to Keycloak, validating their credentials, and exchanging an authorization code for tokens, which are used to maintain authenticated sessions. Below is the step-by-step process:</p>
-<p align="center" style="padding:16px;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
-  <img src="../../../../assets/images/auth.1.svg" alt="image">
-</p>
-
-<h3 id="authentication-steps">Authentication Steps</h3>
+<h1 id="standalone-deployment-for-excell">Standalone Deployment for Excell</h1>
+<p>The Excell ecosystem can also be deployed on a Standalone VM setup, where services are installed and managed directly on virtual machines (VMs) without container orchestration. This deployment model is designed for environments where Kubernetes is not feasible or preferred, allowing services to run as system processes while ensuring efficient resource utilization.</p>
+<blockquote>
+<p>Note: The Keycloak and PostgreSQL setup is handled separately and is not included in this deployment plan.</p>
+</blockquote>
+<h2 id="standalone-deployment-overview">Standalone Deployment Overview</h2>
+<p>The Excell application stack consists of the following components:</p>
+<ul>
+<li>Databases: MongoDB, Redis, Neo4j</li>
+<li>Products: Fluent Bit, Prometheus, Grafana, Nginx</li>
+<li>Microservices: Core API, Keycloak Admin API, Notification API, Storage API, External API, Observability Service</li>
+</ul>
+<p>Unlike Kubernetes, where workloads are dynamically distributed across nodes, a Standalone VM deployment follows a structured assignment of services to specific VMs to ensure resource efficiency and maintainability.</p>
+<h2 id="infrastructure-setup">Infrastructure Setup</h2>
+<h3 id="1-database-caching-node">1. Database &amp; Caching Node</h3>
 <table>
 <thead>
 <tr>
-<th>Step</th>
-<th>Activity</th>
+<th>Component</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>User Accesses the Employee App</td>
-<td>The user attempts to access the Employee App (<code>employee.app.com</code>) but is not logged in.</td>
+<td>MongoDB</td>
+<td>Handles document-based storage for various microservices.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Employee App Redirects to Keycloak</td>
-<td>The Employee App detects the user is unauthenticated and redirects them to Keycloak for login. The request includes parameters such as <code>client_id</code>, <code>redirect_uri</code>, and <code>response_type=code</code>.</td>
+<td>Redis</td>
+<td>Acts as a caching layer to improve response times.</td>
 </tr>
 <tr>
-<td>3</td>
-<td>User Submits Credentials &amp; Keycloak Validates</td>
-<td>The user enters their credentials (username &amp; password) on the Keycloak login page. Keycloak verifies the credentials and checks for any additional authentication requirements (such as MFA, if enabled).</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Keycloak Redirects Back to the Employee App with Authorization Code</td>
-<td>Once authentication is successful, Keycloak redirects the user to the Employee App with an authorization code in the URL (<code>?code=xyz123</code>). This code is temporary and must be exchanged for tokens.</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Employee App Exchanges Code for Tokens &amp; Starts Session</td>
-<td>The Employee App makes a server-to-server request to Keycloak’s token endpoint, sending the authorization code along with client credentials. Keycloak responds with an Access Token, ID Token, and Refresh Token. The Employee App verifies the received tokens and establishes an authenticated session for the user.</td>
+<td>Neo4j</td>
+<td>Graph database for managing network infrastructure inventory.</td>
 </tr>
 </tbody>
 </table>
-<p>Once logged in, the user remains authenticated until the session expires or they log out. The tokens can be used for subsequent API calls to verify user identity and permissions.</p>
-<p>This process ensures that authentication remains secure and centralized, leveraging Keycloak’s identity and access management capabilities for seamless SSO across Excell’s ecosystem.</p>
-<h2 id="authentication-flow-for-backend-apis-using-keycloak">Authentication Flow for Backend APIs Using Keycloak</h2>
-<p>To ensure secure access to backend services, the Employee App uses an Access Token issued by Keycloak. This token is included in the HTTP headers of API requests and is verified by the backend before granting access to protected resources. The authentication process ensures that only authorized users can interact with backend services while maintaining security and compliance.</p>
-<p>The following diagram illustrates the interaction between the Employee App, Backend API, and Keycloak during token validation.</p>
-<p align="center" style=" padding:16px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
-  <img  src="../../../../assets/images/auth.2.svg" alt="image">
-</p>
-
-<h3 id="authentication-steps_1">Authentication Steps</h3>
+<ul>
+<li>Number of VMs: 2</li>
+<li>CPU &amp; RAM Estimate: 8 vCPU, 32GB RAM each</li>
+</ul>
+<hr />
+<h3 id="2-microservices-nodes">2. Microservices Nodes</h3>
 <table>
 <thead>
 <tr>
-<th>Step</th>
-<th>Activity</th>
+<th>Microservices</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>User Accesses the Employee App</td>
-<td>The user is already authenticated and interacts with the Employee App.</td>
+<td>Core API</td>
+<td>Manages business logic and application workflows.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>App Sends Access Token in HTTP Header</td>
-<td>The Employee App includes the Access Token in the HTTP Authorization header when making a request to the backend API.</td>
+<td>Keycloak Admin API</td>
+<td>Handles IAM-related admin operations.</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Backend Looks Up Realm Public Key</td>
-<td>The backend checks its cache for the Realm Public Key using the <code>kid</code> (Key ID) in the JWT header to verify the token's signature.</td>
+<td>Notification API</td>
+<td>Processes and sends notifications via SMS, Email, and Mobile Push.</td>
 </tr>
 <tr>
-<td>3a</td>
-<td>Fetch Public Key if Not Cached</td>
-<td>If the Realm Public Key is not found in the cache, the backend requests it from Keycloak using the <code>kid</code>.</td>
+<td>Storage API</td>
+<td>Provides file storage operations with access control.</td>
 </tr>
 <tr>
-<td>3b</td>
-<td>Keycloak Returns the Realm Public Key</td>
-<td>Keycloak provides the Realm Public Key, allowing the backend to verify the token’s signature.</td>
+<td>External API</td>
+<td>Interfaces with third-party services such as Aadhaar authentication.</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Backend Verifies the Token</td>
-<td>The backend validates the Access Token signature using the Realm Public Key to ensure it is authentic and untampered.</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Backend Grants Access &amp; Returns Data</td>
-<td>Once the token is verified, the backend grants access and returns the requested user data.</td>
+<td>Observability Service</td>
+<td>Manages logging, metrics, and system health monitoring.</td>
 </tr>
 </tbody>
 </table>
-<p>This authentication flow ensures that:</p>
 <ul>
-<li>Only authorized users with a valid Access Token can interact with backend services.</li>
-<li>Tokens are securely validated before granting access.</li>
-<li>The backend does not store passwords, relying entirely on Keycloak for authentication.</li>
+<li>Number of VMs: 3</li>
+<li>CPU &amp; RAM Estimate: 8 vCPU, 32GB RAM each</li>
 </ul>
-<p>This mechanism provides a secure, scalable, and centralized authentication model, leveraging Keycloak's capabilities for identity and access management.</p>
-<h3 id="technology-stack">Technology Stack</h3>
+<hr />
+<h3 id="3-observability-monitoring-node">3. Observability &amp; Monitoring Node</h3>
+<table>
+<thead>
+<tr>
+<th>Observability Components</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fluent Bit</td>
+<td>Collects and forwards logs from all services.</td>
+</tr>
+<tr>
+<td>Prometheus</td>
+<td>Monitors and scrapes system and application metrics.</td>
+</tr>
+<tr>
+<td>Grafana</td>
+<td>Provides dashboards for real-time system insights.</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Latest stable version of keycloak</li>
-<li>PostgreSQL for storing keycloak meta data for persistance</li>
+<li>Number of VMs: 1</li>
+<li>CPU &amp; RAM Estimate: 4 vCPU, 16GB RAM</li>
 </ul>
+<hr />
+<h3 id="4-load-balancer-reverse-proxy-node">4. Load Balancer &amp; Reverse Proxy Node</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nginx</td>
+<td>Handles incoming traffic, routes requests to the appropriate services, and provides SSL termination.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Number of VMs: 1</li>
+<li>CPU &amp; RAM Estimate: 4 vCPU, 16GB RAM</li>
+</ul>
+<hr />
+<h2 id="deployment-considerations">Deployment Considerations</h2>
+<h3 id="service-distribution-strategy">Service Distribution Strategy</h3>
+<p>In a standalone deployment, each service runs as a system process on its designated VM.</p>
+<ul>
+<li>Systemd or Supervisor will be used to ensure services automatically restart in case of failure.</li>
+<li>Manual scaling is required by provisioning additional VMs when needed.</li>
+</ul>
+<h3 id="storage-and-persistence">Storage and Persistence</h3>
+<ul>
+<li>MongoDB and Neo4j will store data on high-performance SSD-backed volumes.</li>
+<li>Redis will be configured with snapshotting and AOF (Append-Only File) for durability.</li>
+</ul>
+<h3 id="security-networking">Security &amp; Networking</h3>
+<ul>
+<li>Firewall rules will be configured to restrict unnecessary external access.</li>
+<li>TLS encryption will be enabled for API communication.</li>
+<li>RBAC-based access control will be enforced using Keycloak authentication mechanisms.</li>
+</ul>
+<h2 id="minimum-standalone-vm-allocation">Minimum Standalone VM Allocation</h2>
+<table>
+<thead>
+<tr>
+<th>VM Group</th>
+<th>No. of VMs</th>
+<th>CPU Allocation</th>
+<th>RAM Allocation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database Nodes</td>
+<td>2</td>
+<td>8 vCPU each</td>
+<td>32GB RAM each</td>
+</tr>
+<tr>
+<td>Microservices Nodes</td>
+<td>3</td>
+<td>8 vCPU each</td>
+<td>32GB RAM each</td>
+</tr>
+<tr>
+<td>Observability Node</td>
+<td>1</td>
+<td>4 vCPU</td>
+<td>16GB RAM</td>
+</tr>
+<tr>
+<td>Load Balancer Node</td>
+<td>1</td>
+<td>4 vCPU</td>
+<td>16GB RAM</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>7 VMs</strong></td>
+<td><strong>~52 vCPU</strong></td>
+<td><strong>~224GB RAM</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This Standalone VM deployment ensures a structured, controlled, and optimized resource allocation while maintaining operational simplicity for environments that do not require container orchestration.</p>
 
 
 
