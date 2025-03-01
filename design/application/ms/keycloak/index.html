@@ -8,25 +8,23 @@
       
       
       
-        <link rel="canonical" href="http://113.11.231.52/docs/design/infra/kubernetes/">
+        <link rel="canonical" href="http://113.11.231.52/docs/design/application/ms/keycloak/">
       
       
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../monolithic/">
       
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
-        <title>Kubernetes - Excell Media Pvt. Ltd.</title>
+        <title>Access Management - Excell Media Pvt. Ltd.</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -45,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/custom.css">
+      <link rel="stylesheet" href="../../../../assets/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-keycloak-works" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Excell Media Pvt. Ltd." class="md-header__button md-logo" aria-label="Excell Media Pvt. Ltd." data-md-component="logo">
+    <a href="../../../.." title="Excell Media Pvt. Ltd." class="md-header__button md-logo" aria-label="Excell Media Pvt. Ltd." data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes
+              Access Management
             
           </span>
         </div>
@@ -172,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Excell Media Pvt. Ltd." class="md-nav__button md-logo" aria-label="Excell Media Pvt. Ltd." data-md-component="logo">
+    <a href="../../../.." title="Excell Media Pvt. Ltd." class="md-nav__button md-logo" aria-label="Excell Media Pvt. Ltd." data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -190,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -246,19 +249,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -273,10 +274,204 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Infrastructure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infra/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infra/monolithic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monolithic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IAM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Microservices
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -315,199 +510,22 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Access Management
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Kubernetes
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../monolithic/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Monolithic
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Application
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            Application
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../application/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../application/iam/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IAM
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Microservices
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_3">
-            <span class="md-nav__icon md-icon"></span>
-            Microservices
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../application/ms/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../application/ms/keycloak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,6 +535,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flow-for-employee-app-using-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow for Employee App Using Keycloak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flow for Employee App Using Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flow-for-backend-apis-using-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow for Backend APIs Using Keycloak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flow for Backend APIs Using Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -562,6 +648,64 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flow-for-employee-app-using-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow for Employee App Using Keycloak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flow for Employee App Using Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flow-for-backend-apis-using-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow for Backend APIs Using Keycloak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flow for Backend APIs Using Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -577,9 +721,114 @@
 
 
 
-  <h1>Kubernetes</h1>
+<h1 id="how-keycloak-works">How Keycloak works</h1>
+<h2 id="authentication-flow-for-employee-app-using-keycloak">Authentication Flow for Employee App Using Keycloak</h2>
+<p>To enable seamless authentication, Excell’s Employee App follows the OAuth 2.0 Authorization Code Flow using Keycloak as the identity provider (IdP). This ensures that users authenticate securely without exposing their credentials to the application. The process follows Single Sign-On (SSO) principles, meaning once authenticated, the user can access multiple services without logging in again.</p>
+<p>The flow involves redirecting unauthenticated users to Keycloak, validating their credentials, and exchanging an authorization code for tokens, which are used to maintain authenticated sessions. Below is the step-by-step process:</p>
+<p align="center">
+  <img src="../../../../assets/images/auth.1.svg" alt="image">
+</p>
 
+<h3 id="authentication-steps">Authentication Steps</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Activity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>User Accesses the Employee App</td>
+<td>The user attempts to access the Employee App (<code>employee.app.com</code>) but is not logged in.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Employee App Redirects to Keycloak</td>
+<td>The Employee App detects the user is unauthenticated and redirects them to Keycloak for login. The request includes parameters such as <code>client_id</code>, <code>redirect_uri</code>, and <code>response_type=code</code>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>User Submits Credentials &amp; Keycloak Validates</td>
+<td>The user enters their credentials (username &amp; password) on the Keycloak login page. Keycloak verifies the credentials and checks for any additional authentication requirements (such as MFA, if enabled).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Keycloak Redirects Back to the Employee App with Authorization Code</td>
+<td>Once authentication is successful, Keycloak redirects the user to the Employee App with an authorization code in the URL (<code>?code=xyz123</code>). This code is temporary and must be exchanged for tokens.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Employee App Exchanges Code for Tokens &amp; Starts Session</td>
+<td>The Employee App makes a server-to-server request to Keycloak’s token endpoint, sending the authorization code along with client credentials. Keycloak responds with an Access Token, ID Token, and Refresh Token. The Employee App verifies the received tokens and establishes an authenticated session for the user.</td>
+</tr>
+</tbody>
+</table>
+<p>Once logged in, the user remains authenticated until the session expires or they log out. The tokens can be used for subsequent API calls to verify user identity and permissions.</p>
+<p>This process ensures that authentication remains secure and centralized, leveraging Keycloak’s identity and access management capabilities for seamless SSO across Excell’s ecosystem.</p>
+<h2 id="authentication-flow-for-backend-apis-using-keycloak">Authentication Flow for Backend APIs Using Keycloak</h2>
+<p>To ensure secure access to backend services, the Employee App uses an Access Token issued by Keycloak. This token is included in the HTTP headers of API requests and is verified by the backend before granting access to protected resources. The authentication process ensures that only authorized users can interact with backend services while maintaining security and compliance.</p>
+<p>The following diagram illustrates the interaction between the Employee App, Backend API, and Keycloak during token validation.</p>
+<p align="center">
+  <img src="../../../../assets/images/auth.2.svg" alt="image">
+</p>
 
+<h3 id="authentication-steps_1">Authentication Steps</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Activity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>User Accesses the Employee App</td>
+<td>The user is already authenticated and interacts with the Employee App.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>App Sends Access Token in HTTP Header</td>
+<td>The Employee App includes the Access Token in the HTTP Authorization header when making a request to the backend API.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Backend Looks Up Realm Public Key</td>
+<td>The backend checks its cache for the Realm Public Key using the <code>kid</code> (Key ID) in the JWT header to verify the token's signature.</td>
+</tr>
+<tr>
+<td>3a</td>
+<td>Fetch Public Key if Not Cached</td>
+<td>If the Realm Public Key is not found in the cache, the backend requests it from Keycloak using the <code>kid</code>.</td>
+</tr>
+<tr>
+<td>3b</td>
+<td>Keycloak Returns the Realm Public Key</td>
+<td>Keycloak provides the Realm Public Key, allowing the backend to verify the token’s signature.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Backend Verifies the Token</td>
+<td>The backend validates the Access Token signature using the Realm Public Key to ensure it is authentic and untampered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Backend Grants Access &amp; Returns Data</td>
+<td>Once the token is verified, the backend grants access and returns the requested user data.</td>
+</tr>
+</tbody>
+</table>
+<p>This authentication flow ensures that:</p>
+<ul>
+<li>Only authorized users with a valid Access Token can interact with backend services.</li>
+<li>Tokens are securely validated before granting access.</li>
+<li>The backend does not store passwords, relying entirely on Keycloak for authentication.</li>
+</ul>
+<p>This mechanism provides a secure, scalable, and centralized authentication model, leveraging Keycloak's capabilities for identity and access management.</p>
 
 
 
@@ -626,10 +875,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.path"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
     
   </body>
